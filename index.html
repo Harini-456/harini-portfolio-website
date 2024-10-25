@@ -12,48 +12,47 @@
             margin: 0;  
             font-family: Arial, sans-serif;  
         }  
-    
+
         .navbar {  
-              
             padding: 0.3rem 1rem;
             position: fixed;  
             width: 100%;  
             z-index: 1000;  
         }  
-    
+
         .navbar .nav-link {  
             color: #333;  
         }  
-    
+
         .navbar .nav-link:hover {  
             color: #0056b3;  
         }  
-    
+
         .hero {  
             background-image: url('back.jpg');  
-            background-size: cover; /* Kōwhiria te rahi o te whakaahua hei kapi i te wāhi */  
-            background-position: center; /* Whakauru i te whakaahua ki te pokapū */  
+            background-size: cover;  
+            background-position: center;  
             height: 100vh;  
-            width: 100%; /* Whakaritehia ki te 100% */  
+            width: 100%;  
             display: flex;  
             flex-direction: column;  
             justify-content: center;  
             align-items: center;  
             color: white;  
             text-align: center;  
-            padding-top: 60px; /* Whakaritehia mō te navbar kua whakatūria */  
+            padding-top: 60px;  
         }  
-    
+
         .hero h1 {  
             font-size: 4rem;  
             margin: 0;  
         }  
-    
+
         .hero p {  
             font-size: 1.5rem;  
             margin: 10px 0;  
         }  
-    
+
         .btn-custom {  
             background-color: #fff;  
             color: #333;  
@@ -63,199 +62,11 @@
             border-radius: 5px;  
             transition: background-color 0.3s ease;  
         }  
-    
+
         .btn-custom:hover {  
             background-color: #f0f0f0;  
         }  
-    
-        footer {  
-            background-color: #333;  
-            color: white;  
-            text-align: center;  
-            padding: 20px 0;  
-        }  
-         
-/* About Section */
-#about {
-    background-color: #f8f9fa; /* Light background */
-    padding: 60px 0;
-}
-
-#about h2 {
-    font-size: 2.5rem;
-    color: #333;
-    position: relative;
-}
-
-#about h2::after {
-    content: '';
-    display: block;
-    width: 80px;
-    height: 3px;
-    background-color: #007bff;
-    margin: 10px auto;
-}
-
-#about p {
-    font-size: 1.1rem;
-    color: #555;
-    line-height: 1.8;
-    transition: color 0.3s ease;
-}
-
-#about p:hover {
-    color: #007bff; /* Change text color on hover */
-}
-
-/* Advanced Hover Effect for Image */
-#about img {
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
-    cursor: pointer;
-}
-
-#about img:hover {
-    transform: scale(1.05); /* Scale image slightly */
-    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2); /* Add a shadow effect */
-}
-
-/* Advanced Styling for the 'About' Section Text */
-#about .col-md-6:hover p {
-    color: #0056b3;
-    transition: color 0.3s ease;
-}
-
-/* Animation for the Section Entry */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-#about .col-md-6 {
-    animation: fadeIn 1s ease;
-}
-
-
-/* Skills Section */
-/* Skills Section */
-#skills {
-    background-color: #f9f9f9;
-    padding: 60px 0;
-    text-align: center;
-}
-
-#skills h2 {
-    font-size: 2.5rem;
-    margin-bottom: 30px;
-    color: #333;
-    position: relative;
-}
-
-#skills h2::after {
-    content: '';
-    display: block;
-    width: 80px;
-    height: 3px;
-    background-color: #007bff;
-    margin: 10px auto;
-}
-
-/* List Styles */
-#skills .list-group {
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-#skills .list-group-item {
-    background-color: #fff;
-    border: 1px solid #ddd;
-    padding: 15px;
-    font-size: 1.2rem;
-    transition: background-color 0.4s, color 0.3s, transform 0.3s ease-in-out, box-shadow 0.4s;
-    cursor: pointer;
-}
-
-#skills .list-group-item:hover {
-    background-color: #007bff; /* Change background color on hover */
-    color: white; /* Change text color on hover */
-    transform: translateY(-5px); /* Slight upward movement */
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Add shadow effect */
-}
-
-/* Fade-in Animation */
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* Contact Section */
-#contact {
-    background-color: #f9f9f9;
-    padding: 60px 0;
-}
-
-#contact h2 {
-    font-size: 2.5rem;
-    margin-bottom: 30px;
-    color: #333;
-    position: relative;
-}
-
-#contact h2::after {
-    content: '';
-    display: block;
-    width: 80px;
-    height: 3px;
-    background-color: #007bff;
-    margin: 10px auto;
-}
-
-/* Form Styling */
-#contactForm .form-control {
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    padding: 15px;
-    font-size: 1rem;
-    transition: border-color 0.4s ease, box-shadow 0.4s ease;
-}
-
-/* Form fields hover and focus effects */
-#contactForm .form-control:focus {
-    border-color: #007bff;
-    box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
-    outline: none;
-}
-
-/* Buttons Styling */
-.btn-custom {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    padding: 12px 20px;
-    font-size: 1rem;
-    border-radius: 5px;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-    width: 100%;
-    margin-bottom: 10px;
-}
-
-.btn-custom:hover {
-    background-color: #0056b3;
-    transform: scale(1.02); /* Slight zoom on hover */
-}
-
-.btn-secondary {
+        .btn-secondary {
     background-color: #6c757d;
     color: white;
     border: none;
@@ -271,7 +82,180 @@
     transform: scale(1.02); /* Slight zoom on hover */
 }
 
-/* Responsive Form */
+        footer {  
+            background-color: #333;  
+            color: white;  
+            text-align: center;  
+            padding: 20px 0;  
+        }  
+
+        /* About Section */
+        #about {
+            background-color: #f8f9fa;
+            padding: 60px 0;
+        }
+
+        #about h2 {
+            font-size: 2.5rem;
+            color: #333;
+            position: relative;
+        }
+
+        #about h2::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 3px;
+            background-color: #007bff;
+            margin: 10px auto;
+        }
+
+        #about p {
+            font-size: 1.1rem;
+            color: #555;
+            line-height: 1.8;
+        }
+
+        #about p:hover {
+            color: #007bff; /* Change text color on hover */
+        }
+        #about img {
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+            cursor: pointer;
+        }
+
+        #about img:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+        }
+        #about .col-md-6:hover p {
+            color: #0056b3;
+            transition: color 0.3s ease;
+        }
+        #about .col-md-6 {
+    animation: fadeIn 1s ease;
+}
+
+        /* Skills Section */
+        #skills {
+            background-color: #f9f9f9;
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        #skills h2 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            color: #333;
+            position: relative;
+        }
+
+        #skills h2::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 3px;
+            background-color: #007bff;
+            margin: 10px auto;
+        }
+
+        /* List Styles */
+        #skills .list-group {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        #skills .list-group-item {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            padding: 15px;
+            font-size: 1.2rem;
+        }
+
+        /* Contact Section */
+        #contact {
+            background-color: #f9f9f9;
+            padding: 60px 0;
+        }
+
+        #contact h2 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            color: #333;
+            position: relative;
+        }
+
+        #contact h2::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 3px;
+            background-color: #007bff;
+            margin: 10px auto;
+        }
+        #contactForm {
+            animation: fadeInUp 0.8s ease;
+        }
+
+        #contactForm .form-control {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 15px;
+            font-size: 1rem;
+            transition: border-color 0.4s ease, box-shadow 0.4s ease;
+        }
+
+        #contactForm .form-control:focus {
+            border-color: #007bff;
+            box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
+            outline: none;
+        }
+
+        .btn-custom {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            font-size: 1rem;
+            border-radius: 5px;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+
+        footer {
+            background-color: #343a40;
+            color: #ffffff;
+        }
+
+        .navbar {
+            background-color: #2c3e50;
+            transition: background-color 0.3s ease;
+        }
+
+        .navbar .navbar-brand {
+            color: #ffffff;
+            font-size: 1.5rem;
+        }
+
+        .navbar .nav-link {
+            color: #ffffff;
+            font-size: 1.1rem;
+            transition: color 0.3s ease;
+        }
+
+        .navbar .nav-link:hover {
+            color: #007bff;
+        }
+
+        @media (max-width: 768px) {
+    footer p {
+        font-size: 1rem; 
+    }
+
+    .social-icons a {
+        font-size: 1.2rem; 
+    }
+}
 @media (min-width: 768px) {
     .btn-custom,
     .btn-secondary {
@@ -291,17 +275,26 @@
         transform: translateY(0);
     }
 }
-
-#contactForm {
-    animation: fadeInUp 0.8s ease;
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
-
-/* Footer Styles */
-footer {
-    background-color: #343a40; /* Dark background */
-    color: #ffffff; /* Light text */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
-
 footer p {
     margin: 0;
     font-size: 1.2rem; /* Increased font size for better visibility */
@@ -321,56 +314,6 @@ footer p {
 .social-icons {
     margin-top: 10px; /* Space above social icons */
 }
-
-/* Responsive Footer */
-@media (max-width: 768px) {
-    footer p {
-        font-size: 1rem; 
-    }
-
-    .social-icons a {
-        font-size: 1.2rem; 
-    }
-}
-
-/* Navbar Styles */
-.navbar {
-    background-color: #2c3e50; 
-    transition: background-color 0.3s ease; 
-}
-
-.navbar .navbar-brand {
-    color: #ffffff; /* White brand text */
-    font-size: 1.5rem; /* Increase font size */
-}
-
-.navbar .nav-link {
-    color: #ffffff;
-    font-size: 1.1rem; 
-    transition: color 0.3s ease; 
-}
-
-.navbar .nav-link:hover {
-    color: #007bff; 
-}
-
-/* Navbar Toggler Styles */
-.navbar-toggler {
-    border-color: rgba(255, 255, 255, 0.5); /* Light border color for toggler */
-}
-
-.navbar-toggler-icon {
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30' width='30' height='30' fill='%23ffffff'%3E%3Cpath stroke='rgba(255, 255, 255, 0.5)' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
-}
-
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .navbar .navbar-brand {
-        font-size: 1.3rem; /* Adjust brand size on smaller screens */
-    }
-}
-
 
     </style>  
 </head>  
@@ -395,16 +338,13 @@ footer p {
         </div>  
     </nav>
     
- 
-
     <section class="hero" id="home">  
         <h1>Welcome To My Website</h1>  
         <p>Explore My Journey: Crafting Code, Designing Dreams</p>  
-        <a href="#about" class="btn btn-custom">Learn More</a>  
+        <a href="#about" class="btn btn-primary">Learn More</a>  
     </section>  
 
-     <!-- About Section -->  
-     <section id="about" class="py-5 bg-light">  
+    <section id="about" class="py-5 bg-light">  
         <div class="container">  
             <h2 class="text-center mb-4">About</h2>  
             <div class="row">  
@@ -414,14 +354,12 @@ footer p {
                 <div class="col-md-6">  
                     <p>I am Harini, currently pursuing a B.Tech degree with a specialization in <b>Cybersecurity and IoT (Internet Of Things)</b>.  
                         I am passionate about web design, driven by the challenge of transforming creative ideas into engaging online experiences.  
-                        My expertise spans both frontend and backend development, allowing me to create cohesive web applications that deliver seamless user experiences.  
-                        I continuously seek to expand my skills in these areas, ensuring that I stay current with industry trends and best practices.  
+                        I have experience in both frontend and backend development, allowing me to create cohesive web applications that deliver seamless user experiences.  
                     </p>  
                 </div>  
             </div>  
         </div>  
     </section>  
-      
 
     <section id="skills" class="py-5">  
         <div class="container">  
@@ -433,36 +371,33 @@ footer p {
                 <li class="list-group-item">Python</li>  
             </ul>  
         </div>  
-    </section>
-    
+    </section>  
 
-    <!-- Contact Section -->  
     <section id="contact" class="py-5 bg-light">  
         <div class="container">  
-            <h2 class="text-center mb-4">Contact</h2>  
-            <form id="contactForm" method="get">  
-                <div class="mb-3">  
-                    <label for="name" class="form-label">Name</label>  
-                    <input type="text" class="form-control" id="name" required>  
+            <h2 class="text-center mb-4">Contact Me</h2>  
+            <div class="row justify-content-center">  
+                <div class="col-md-6">  
+                    <form id="contactForm" method="POST" action="#">  
+                        <div class="mb-3">  
+                            <label for="name" class="form-label">Name</label>  
+                            <input type="text" class="form-control" id="name" name="name" required>  
+                        </div>  
+                        <div class="mb-3">  
+                            <label for="email" class="form-label">Email</label>  
+                            <input type="email" class="form-control" id="email" name="email" required>  
+                        </div>  
+                        <div class="mb-3">  
+                            <label for="message" class="form-label">Message</label>  
+                            <textarea class="form-control" id="message" name="message" rows="5" required></textarea>  
+                        </div>  
+                        <button type="submit" class="btn btn-custom">Send Message</button>  
+                    </form>  
                 </div>  
-                <div class="mb-3">  
-                    <label for="email" class="form-label">Email</label>  
-                    <input type="email" class="form-control" id="email" required>  
-                </div>  
-                <div class="mb-3">  
-                    <label for="phone" class="form-label">Phone Number</label>  
-                    <input type="tel" class="form-control" id="phone" required>  
-                </div>  
-                <div class="mb-3">  
-                    <label for="message" class="form-label">Message</label>  
-                    <textarea class="form-control" id="message" rows="3"></textarea>  
-                </div>  
-                <button type="submit" class="btn btn-custom">Submit</button>  
-                <button type="reset" class="btn btn-secondary">Cancel</button>  
-            </form>  
+            </div>  
         </div>  
-    </section>
-    
+    </section>  
+
     <footer class="text-center py-3 bg-dark text-light">  
         <p>&copy; 2024 copyrights. All rights reserved.</p>  
         <div class="social-icons text-center mb-4">  
@@ -471,59 +406,53 @@ footer p {
             <a href="https://www.linkedin.com/in/harini-s-btech-cys-iot-9b8461325"><i class="bi bi-linkedin"></i></a>  
         </div>  
     </footer>  
-    
-  
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>  
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>  
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>  
     <script>
-    document.querySelectorAll('a.nav-link').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-    
-            document.querySelector(this.getAttribute('href')).scrollIntoView({
-                behavior: 'smooth'
+        document.querySelectorAll('a.nav-link').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+        
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
             });
         });
-    });
+        
+        const contactForm = document.getElementById('contactForm');
+        
+        contactForm.addEventListener('submit', function (event) {
+            event.preventDefault(); 
+        
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const phone = document.getElementById('phone').value.trim();
+            const message = document.getElementById('message').value.trim();
+        
+            let errors = [];
+        
+            if (name === "") {
+                errors.push("Name is required");
+            }
+            if (email === "") {
+                errors.push("Email is required");
+            } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+                errors.push("Please enter a valid email address");
+            }
+            if (phone === "") {
+                errors.push("Phone number is required");
+            } else if (!/^\d{10}$/.test(phone)) {
+                errors.push("Please enter a valid 10-digit phone number");
+            }
     
-    const contactForm = document.getElementById('contactForm');
-    
-    contactForm.addEventListener('submit', function (event) {
-        event.preventDefault(); 
-    
-        const name = document.getElementById('name').value.trim();
-        const email = document.getElementById('email').value.trim();
-        const phone = document.getElementById('phone').value.trim();
-        const message = document.getElementById('message').value.trim();
-    
-        let errors = [];
-    
-        if (name === "") {
-            errors.push("Name is required");
-        }
-        if (email === "") {
-            errors.push("Email is required");
-        } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-            errors.push("Please enter a valid email address");
-        }
-        if (phone === "") {
-            errors.push("Phone number is required");
-        } else if (!/^\d{10}$/.test(phone)) {
-            errors.push("Please enter a valid 10-digit phone number");
-        }
-
-        if (errors.length > 0) {
-            alert(errors.join("\n"));
-        } else {
-            alert("Form submitted successfully!");
-        }
-    });
-    </script>
-     
+            if (errors.length > 0) {
+                alert(errors.join("\n"));
+            } else {
+                alert("Form submitted successfully!");
+            }
+        });
+        </script>
 </body>  
 
-</html>
-
-
-
-
-
+</html>  
