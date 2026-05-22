@@ -1,458 +1,752 @@
-<!DOCTYPE html>  
-<html lang="en">  
+<!DOCTYPE html>
+<html lang="en">
 
-<head>  
-    <meta charset="UTF-8">  
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
-    <title>My Portfolio</title>  
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">  
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">  
-    <style>  
-        body {  
-            margin: 0;  
-            font-family: Arial, sans-serif;  
-        }  
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        .navbar {  
-            padding: 0.3rem 1rem;
-            position: fixed;  
-            width: 100%;  
-            z-index: 1000;  
-        }  
+  <title>Harini S | Portfolio</title>
 
-        .navbar .nav-link {  
-            color: #333;  
-        }  
+  <!-- GOOGLE FONT -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
 
-        .navbar .nav-link:hover {  
-            color: #0056b3;  
-        }  
+  <!-- FONT AWESOME -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 
-        .hero {  
-            background-image: url('back.jpg');  
-            background-size: cover;  
-            background-position: center;  
-            height: 100vh;  
-            width: 100%;  
-            display: flex;  
-            flex-direction: column;  
-            justify-content: center;  
-            align-items: center;  
-            color: white;  
-            text-align: center;  
-            padding-top: 60px;  
-        }  
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
 
-        .hero h1 {  
-            font-size: 4rem;  
-            margin: 0;  
-        }  
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #ffffff;
+      color: #111827;
+      overflow-x: hidden;
+    }
 
-        .hero p {  
-            font-size: 1.5rem;  
-            margin: 10px 0;  
-        }  
+    a {
+      text-decoration: none;
+    }
 
-        .btn-custom {  
-            background-color: #fff;  
-            color: #333;  
-            border: none;  
-            padding: 10px 20px;  
-            font-size: 1rem;  
-            border-radius: 5px;  
-            transition: background-color 0.3s ease;  
-        }  
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: auto;
+    }
 
-        .btn-custom:hover {  
-            background-color: #f0f0f0;  
-        }  
-        .btn-secondary {
-    background-color: #6c757d;
-    color: white;
-    border: none;
-    padding: 12px 20px;
-    font-size: 1rem;
-    border-radius: 5px;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-    width: 100%;
-}
+    /* NAVBAR */
 
-.btn-secondary:hover {
-    background-color: #5a6268;
-    transform: scale(1.02); /* Slight zoom on hover */
-}
+    nav {
+      width: 100%;
+      background: white;
+      position: fixed;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+    }
 
-        footer {  
-            background-color: #333;  
-            color: white;  
-            text-align: center;  
-            padding: 20px 0;  
-        }  
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 18px 0;
+    }
 
-        /* About Section */
-        #about {
-            background-color: #f8f9fa;
-            padding: 60px 0;
-        }
+    .logo {
+      font-size: 28px;
+      font-weight: 700;
+      color: #2563eb;
+    }
 
-        #about h2 {
-            font-size: 2.5rem;
-            color: #333;
-            position: relative;
-        }
+    .nav-links {
+      display: flex;
+      gap: 30px;
+    }
 
-        #about h2::after {
-            content: '';
-            display: block;
-            width: 80px;
-            height: 3px;
-            background-color: #007bff;
-            margin: 10px auto;
-        }
+    .nav-links a {
+      color: #111827;
+      font-weight: 500;
+      transition: 0.3s;
+    }
 
-        #about p {
-            font-size: 1.1rem;
-            color: #555;
-            line-height: 1.8;
-        }
+    .nav-links a:hover {
+      color: #2563eb;
+    }
 
-        #about p:hover {
-            color: #007bff; /* Change text color on hover */
-        }
-        #about img {
-            transition: transform 0.4s ease, box-shadow 0.4s ease;
-            cursor: pointer;
-        }
+    /* HERO SECTION */
 
-        #about img:hover {
-            transform: scale(1.05);
-            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
-        }
-        #about .col-md-6:hover p {
-            color: #0056b3;
-            transition: color 0.3s ease;
-        }
-        #about .col-md-6 {
-    animation: fadeIn 1s ease;
-}
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding-top: 100px;
+      background: #f8fafc;
+    }
 
-        /* Skills Section */
-        #skills {
-            background-color: #f9f9f9;
-            padding: 60px 0;
-            text-align: center;
-        }
+    .hero-container {
+      display: grid;
+      grid-template-columns: 60% 40%;
+      align-items: center;
+      gap: 50px;
+    }
 
-        #skills h2 {
-            font-size: 2.5rem;
-            margin-bottom: 30px;
-            color: #333;
-            position: relative;
-        }
+    .hero-text h4 {
+      color: #2563eb;
+      font-size: 18px;
+      letter-spacing: 2px;
+      margin-bottom: 15px;
+    }
 
-        #skills h2::after {
-            content: '';
-            display: block;
-            width: 80px;
-            height: 3px;
-            background-color: #007bff;
-            margin: 10px auto;
-        }
+    .hero-text h1 {
+      font-size: 65px;
+      margin-bottom: 10px;
+      color: #111827;
+    }
 
-        /* List Styles */
-        #skills .list-group {
-            max-width: 600px;
-            margin: 0 auto;
-        }
+    .hero-text h2 {
+      font-size: 30px;
+      color: #475569;
+      margin-bottom: 25px;
+      font-weight: 500;
+    }
 
-        #skills .list-group-item {
-            background-color: #fff;
-            border: 1px solid #ddd;
-            padding: 15px;
-            font-size: 1.2rem;
-        }
+    .hero-text p {
+      color: #555;
+      line-height: 1.8;
+      margin-bottom: 35px;
+      max-width: 650px;
+    }
 
-        /* Contact Section */
-        #contact {
-            background-color: #f9f9f9;
-            padding: 60px 0;
-        }
+    .hero-buttons {
+      display: flex;
+      gap: 20px;
+    }
 
-        #contact h2 {
-            font-size: 2.5rem;
-            margin-bottom: 30px;
-            color: #333;
-            position: relative;
-        }
+    .btn {
+      padding: 14px 30px;
+      background: #2563eb;
+      color: white;
+      border-radius: 8px;
+      font-weight: 600;
+      transition: 0.3s;
+    }
 
-        #contact h2::after {
-            content: '';
-            display: block;
-            width: 80px;
-            height: 3px;
-            background-color: #007bff;
-            margin: 10px auto;
-        }
-        #contactForm {
-            animation: fadeInUp 0.8s ease;
-        }
+    .btn:hover {
+      background: #1d4ed8;
+      transform: translateY(-3px);
+    }
 
-        #contactForm .form-control {
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            padding: 15px;
-            font-size: 1rem;
-            transition: border-color 0.4s ease, box-shadow 0.4s ease;
-        }
+    .btn-outline {
+      padding: 12px 30px;
+      border: 2px solid #2563eb;
+      color: #2563eb;
+      border-radius: 8px;
+      font-weight: 600;
+      transition: 0.3s;
+    }
 
-        #contactForm .form-control:focus {
-            border-color: #007bff;
-            box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
-            outline: none;
-        }
+    .btn-outline:hover {
+      background: #2563eb;
+      color: white;
+    }
 
-        .btn-custom {
-            background-color: #007bff;
-            color: white;
-            border: none;
-            padding: 12px 20px;
-            font-size: 1rem;
-            border-radius: 5px;
-            width: 100%;
-            margin-bottom: 10px;
-        }
+    /* IMAGE */
 
-        footer {
-            background-color: #343a40;
-            color: #ffffff;
-        }
+    .hero-image {
+      display: flex;
+      justify-content: center;
+    }
 
-        .navbar {
-            background-color: #2c3e50;
-            transition: background-color 0.3s ease;
-        }
+    .image-box {
+      width: 350px;
+      height: 430px;
+      border-radius: 20px;
+      overflow: hidden;
+      background: white;
+      box-shadow: 0 10px 35px rgba(0, 0, 0, 0.12);
+    }
 
-        .navbar .navbar-brand {
-            color: #ffffff;
-            font-size: 1.5rem;
-        }
+    .image-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
 
-        .navbar .nav-link {
-            color: #ffffff;
-            font-size: 1.1rem;
-            transition: color 0.3s ease;
-        }
+    /* SECTION */
 
-        .navbar .nav-link:hover {
-            color: #007bff;
-        }
+    section {
+      padding: 100px 0;
+    }
 
-        @media (max-width: 768px) {
-    footer p {
-        font-size: 1rem; 
+    .section-title {
+      text-align: center;
+      font-size: 42px;
+      margin-bottom: 60px;
+      color: #2563eb;
+      position: relative;
+    }
+
+    .section-title::after {
+      content: "";
+      width: 80px;
+      height: 4px;
+      background: #2563eb;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: -15px;
+      border-radius: 10px;
+    }
+
+    /* ABOUT */
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 30px;
+    }
+
+    .about-card {
+      background: #f8fafc;
+      padding: 35px;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      transition: 0.3s;
+    }
+
+    .about-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .about-card h3 {
+      margin-bottom: 20px;
+      color: #2563eb;
+    }
+
+    /* SKILLS */
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+    }
+
+    .skill-card {
+      background: white;
+      border: 1px solid #e5e7eb;
+      padding: 30px;
+      border-radius: 15px;
+      text-align: center;
+      transition: 0.3s;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    }
+
+    .skill-card:hover {
+      transform: translateY(-8px);
+    }
+
+    .skill-card i {
+      font-size: 40px;
+      color: #2563eb;
+      margin-bottom: 20px;
+    }
+
+    .skill-card h3 {
+      margin-bottom: 10px;
+    }
+
+    /* PROJECTS */
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+      gap: 30px;
+    }
+
+    .project-card {
+      background: white;
+      border-radius: 15px;
+      padding: 35px;
+      border: 1px solid #e5e7eb;
+      transition: 0.3s;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    }
+
+    .project-card:hover {
+      transform: translateY(-8px);
+    }
+
+    .project-card h3 {
+      color: #2563eb;
+      margin-bottom: 20px;
+    }
+
+    .project-card p {
+      color: #555;
+      line-height: 1.7;
+      margin-bottom: 15px;
+    }
+
+    /* INTERNSHIPS */
+
+    .internship-card {
+      background: #f8fafc;
+      padding: 35px;
+      border-radius: 15px;
+      margin-bottom: 25px;
+      border-left: 5px solid #2563eb;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    }
+
+    .internship-card h3 {
+      color: #2563eb;
+      margin-bottom: 10px;
+    }
+
+    /* CONTACT */
+
+    .contact-box {
+      max-width: 700px;
+      margin: auto;
+      background: #f8fafc;
+      padding: 40px;
+      border-radius: 20px;
+      text-align: center;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    }
+
+    .contact-box p {
+      margin-bottom: 15px;
+      font-size: 18px;
+    }
+
+    .social-icons {
+      margin-top: 25px;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
     }
 
     .social-icons a {
-        font-size: 1.2rem; 
+      width: 50px;
+      height: 50px;
+      background: #2563eb;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      font-size: 20px;
+      transition: 0.3s;
     }
-}
-@media (min-width: 768px) {
-    .btn-custom,
-    .btn-secondary {
-        width: auto;
-        padding: 12px 30px;
+
+    .social-icons a:hover {
+      transform: translateY(-5px);
+      background: #1d4ed8;
     }
-}
 
-/* Fade-in Animation */
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
+    /* FOOTER */
+
+    footer {
+      background: #111827;
+      color: white;
+      text-align: center;
+      padding: 25px;
     }
-    to {
-        opacity: 1;
-        transform: translateY(0);
+
+    /* RESPONSIVE */
+
+    @media(max-width:900px) {
+
+      .hero-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      .hero-text p {
+        margin: auto auto 35px;
+      }
+
+      .hero-buttons {
+        justify-content: center;
+      }
+
+      .hero-text h1 {
+        font-size: 45px;
+      }
+
+      .hero-text h2 {
+        font-size: 24px;
+      }
+
+      .image-box {
+        width: 280px;
+        height: 350px;
+      }
+
+      .nav-links {
+        gap: 15px;
+        font-size: 14px;
+      }
     }
-}
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-footer p {
-    margin: 0;
-    font-size: 1.2rem; /* Increased font size for better visibility */
-}
+  </style>
+</head>
 
-.social-icons a {
-    color: #ffffff; /* White icons */
-    font-size: 1.5rem; /* Icon size */
-    transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition for hover effects */
-}
+<body>
 
-.social-icons a:hover {
-    color: #007bff; /* Change color on hover */
-    transform: scale(1.2); /* Slight zoom effect on hover */
-}
+  <!-- NAVBAR -->
 
-.social-icons {
-    margin-top: 10px; /* Space above social icons */
-}
+  <nav>
 
-    </style>  
-</head>  
+    <div class="container nav-container">
 
-<body>  
+      <div class="logo">Harini S</div>
 
-    <nav class="navbar navbar-expand-lg">  
-        <div class="container-fluid">  
-            <a class="navbar-brand" href="#">My Portfolio</a>  
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"  
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">  
-                <span class="navbar-toggler-icon"></span>  
-            </button>  
-            <div class="collapse navbar-collapse" id="navbarNav">  
-                <ul class="navbar-nav ms-auto">  
-                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>  
-                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>  
-                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>  
-                </ul>  
-            </div>  
-        </div>  
-    </nav>
-    
-    <section class="hero" id="home">  
-        <h1>Welcome To My Website</h1>  
-        <p>Explore My Journey: Crafting Code, Designing Dreams</p>  
-        <a href="#about" class="btn btn-primary">Learn More</a>  
-    </section>  
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#internships">Internships</a>
+        <a href="#contact">Contact</a>
+      </div>
 
-    <section id="about" class="py-5 bg-light">  
-        <div class="container">  
-            <h2 class="text-center mb-4">About</h2>  
-            <div class="row">  
-                <div class="col-md-6 d-flex justify-content-center">  
-                    <img src="ha.jpg" alt="Your Image" class="rounded-circle shadow" style="width: 300px; height: 300px; object-fit: cover;">  
-                </div>  
-                <div class="col-md-6">  
-                    <p>I am Harini, currently pursuing a B.Tech degree with a specialization in <b>Cybersecurity and IoT (Internet Of Things)</b>.  
-                        I am passionate about web design, driven by the challenge of transforming creative ideas into engaging online experiences.  
-                        I have experience in both frontend and backend development, allowing me to create cohesive web applications that deliver seamless user experiences.  
-                    </p>  
-                </div>  
-            </div>  
-        </div>  
-    </section>  
+    </div>
 
-    <section id="skills" class="py-5">  
-        <div class="container">  
-            <h2 class="text-center mb-4">Skills</h2>  
-            <ul class="list-group list-group-flush">  
-                <li class="list-group-item">C Programming</li>  
-                <li class="list-group-item">Object Oriented Java</li>  
-                <li class="list-group-item">MySQL</li>  
-                <li class="list-group-item">Python</li>  
-            </ul>  
-        </div>  
-    </section>  
+  </nav>
 
-    <section id="contact" class="py-5 bg-light">  
-        <div class="container">  
-            <h2 class="text-center mb-4">Contact Me</h2>  
-            <div class="row justify-content-center">  
-                <div class="col-md-6">  
-                    <form id="contactForm" method="POST" action="#">  
-                        <div class="mb-3">  
-                            <label for="name" class="form-label">Name</label>  
-                            <input type="text" class="form-control" id="name" name="name" required>  
-                        </div>  
-                        <div class="mb-3">  
-                            <label for="email" class="form-label">Email</label>  
-                            <input type="email" class="form-control" id="email" name="email" required>  
-                        </div>  
-                        <div class="mb-3">  
-                            <label for="message" class="form-label">Message</label>  
-                            <textarea class="form-control" id="message" name="message" rows="5" required></textarea>  
-                        </div>  
-                        <button type="submit" class="btn btn-custom">Send Message</button>  
-                    </form>  
-                </div>  
-            </div>  
-        </div>  
-    </section>  
+  <!-- HERO SECTION -->
 
-    <footer class="text-center py-3 bg-dark text-light">  
-        <p>&copy; 2024 copyrights. All rights reserved.</p>  
-        <div class="social-icons text-center mb-4">  
-            <a href="#" class="me-3"><i class="bi bi-twitter"></i></a>  
-            <a href="https://github.com/dashboard" class="me-3"><i class="bi bi-github"></i></a>  
-            <a href="https://www.linkedin.com/in/harini-s-btech-cys-iot-9b8461325"><i class="bi bi-linkedin"></i></a>  
-        </div>  
-    </footer>  
+  <section class="hero">
 
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>  
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>  
-    <script>
-        document.querySelectorAll('a.nav-link').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-        
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-        
-        const contactForm = document.getElementById('contactForm');
-        
-        contactForm.addEventListener('submit', function (event) {
-            event.preventDefault(); 
-        
-            const name = document.getElementById('name').value.trim();
-            const email = document.getElementById('email').value.trim();
-            const phone = document.getElementById('phone').value.trim();
-            const message = document.getElementById('message').value.trim();
-        
-            let errors = [];
-        
-            if (name === "") {
-                errors.push("Name is required");
-            }
-            if (email === "") {
-                errors.push("Email is required");
-            } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-                errors.push("Please enter a valid email address");
-            }
-            if (phone === "") {
-                errors.push("Phone number is required");
-            } else if (!/^\d{10}$/.test(phone)) {
-                errors.push("Please enter a valid 10-digit phone number");
-            }
-    
-            if (errors.length > 0) {
-                alert(errors.join("\n"));
-            } else {
-                alert("Form submitted successfully!");
-            }
-        });
-        </script>
-</body>  
+    <div class="container hero-container">
 
-</html>  
+      <!-- LEFT CONTENT -->
+
+      <div class="hero-text">
+
+        <h4>FULL STACK DEVELOPER</h4>
+
+        <h1>Harini S</h1>
+
+        <h2>Cybersecurity & IoT Enthusiast</h2>
+
+        <p>
+          Passionate Full Stack Developer specializing in web development,
+          cybersecurity, phishing detection systems, IoT solutions,
+          and secure authentication platforms.
+          Skilled in React.js, Node.js, MongoDB, Python, and Cybersecurity tools.
+        </p>
+
+        <div class="hero-buttons">
+
+          <a href="https://github.com/Harini-456" target="_blank" class="btn">
+            GitHub
+          </a>
+
+          <a href="https://linkedin.com/in/harini-s-9b8461325"
+            target="_blank"
+            class="btn-outline">
+            LinkedIn
+          </a>
+
+        </div>
+
+      </div>
+
+      <!-- RIGHT IMAGE -->
+
+      <div class="hero-image">
+
+        <div class="image-box">
+
+          <!-- ADD YOUR IMAGE -->
+
+          <img src="HARINI PHOTO.jpg" alt="Harini Photo">
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- ABOUT -->
+
+  <section id="about">
+
+    <div class="container">
+
+      <h2 class="section-title">About Me</h2>
+
+      <div class="about-grid">
+
+        <div class="about-card">
+
+          <h3>Education</h3>
+
+          <p>
+            <strong>B.Tech CSE Cybersecurity and IoT</strong><br>
+            Sri Ramachandra Faculty of Engineering and Technology<br>
+            CGPA: 7.4<br><br>
+
+            <strong>Higher Secondary</strong><br>
+            Swami Vivekananda Matriculation Higher Secondary School<br>
+            71%
+          </p>
+
+        </div>
+
+        <div class="about-card">
+
+          <h3>Career Objective</h3>
+
+          <p>
+            To work in a challenging environment where I can apply my
+            Full Stack Development and Cybersecurity skills to develop
+            secure and innovative software applications.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- SKILLS -->
+
+  <section id="skills">
+
+    <div class="container">
+
+      <h2 class="section-title">Technical Skills</h2>
+
+      <div class="skills-grid">
+
+        <div class="skill-card">
+          <i class="fa-brands fa-html5"></i>
+          <h3>Frontend</h3>
+          <p>HTML, CSS, Bootstrap, JavaScript, React.js</p>
+        </div>
+
+        <div class="skill-card">
+          <i class="fa-solid fa-server"></i>
+          <h3>Backend</h3>
+          <p>Node.js, Express.js</p>
+        </div>
+
+        <div class="skill-card">
+          <i class="fa-solid fa-code"></i>
+          <h3>Programming</h3>
+          <p>C, C++, Python, Linux</p>
+        </div>
+
+        <div class="skill-card">
+          <i class="fa-solid fa-database"></i>
+          <h3>Database</h3>
+          <p>MongoDB, MySQL</p>
+        </div>
+
+        <div class="skill-card">
+          <i class="fa-solid fa-shield-halved"></i>
+          <h3>Cybersecurity</h3>
+          <p>SIEM, Threat Detection, Vulnerability Analysis</p>
+        </div>
+
+        <div class="skill-card">
+          <i class="fa-solid fa-toolbox"></i>
+          <h3>Tools</h3>
+          <p>Splunk, Wireshark, Nmap, VirusTotal API</p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- PROJECTS -->
+
+  <section id="projects">
+
+    <div class="container">
+
+      <h2 class="section-title">Projects</h2>
+
+      <div class="projects-grid">
+
+        <div class="project-card">
+
+          <h3>Access Revocation Management System</h3>
+
+          <p>
+            Developed a secure role-based access management system
+            for managing and revoking user permissions in real time.
+          </p>
+
+          <p>
+            <strong>Tech Stack:</strong><br>
+            Node.js, Express.js, React.js, MongoDB
+          </p>
+
+        </div>
+
+        <div class="project-card">
+
+          <h3>Browser Based Phishing Detection Assistant</h3>
+
+          <p>
+            Built a phishing detection Chrome extension using machine learning
+            to detect malicious URLs and alert users instantly.
+          </p>
+
+          <p>
+            <strong>Tech Stack:</strong><br>
+            Python, Scikit-learn, JavaScript, HTML, CSS
+          </p>
+
+        </div>
+
+        <div class="project-card">
+
+          <h3>Face Recognition Authentication System</h3>
+
+          <p>
+            Developed a secure login system using face recognition,
+            Flask, OpenCV, and Zero Knowledge Proof concepts.
+          </p>
+
+          <p>
+            <strong>Tech Stack:</strong><br>
+            Flask, OpenCV, Python, Circom
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- INTERNSHIPS -->
+
+  <section id="internships">
+
+    <div class="container">
+
+      <h2 class="section-title">Internships</h2>
+
+      <div class="internship-card">
+
+        <h3>Web Development Intern</h3>
+
+        <p>
+          Sri Ramachandra Faculty of Engineering and Technology
+        </p>
+
+        <p>
+          Developed a hotel booking website with responsive design
+          and real-time room availability checking.
+        </p>
+
+      </div>
+
+      <div class="internship-card">
+
+        <h3>Cybersecurity Intern</h3>
+
+        <p>
+          SeeDataMD Private Limited
+        </p>
+
+        <p>
+          Built a Chrome extension to detect phishing websites
+          and alert users about malicious URLs in real time.
+        </p>
+
+      </div>
+
+      <div class="internship-card">
+
+        <h3>Cybersecurity Intern</h3>
+
+        <p>
+          TetroInfoTech Private Limited
+        </p>
+
+        <p>
+          Worked on brute-force attack detection using Splunk SIEM,
+          authentication logs, firewall logs, and dashboards.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- CONTACT -->
+
+  <section id="contact">
+
+    <div class="container">
+
+      <h2 class="section-title">Contact Me</h2>
+
+      <div class="contact-box">
+
+        <p>
+          <strong>Email:</strong><br>
+          harinisarav456@gmail.com
+        </p>
+
+        <p>
+          <strong>Phone:</strong><br>
+          +91 8610993961
+        </p>
+
+        <p>
+          <strong>Location:</strong><br>
+          Chennai, Tamil Nadu
+        </p>
+
+        <div class="social-icons">
+
+          <a href="https://github.com/Harini-456" target="_blank">
+            <i class="fa-brands fa-github"></i>
+          </a>
+
+          <a href="https://linkedin.com/in/harini-s-9b8461325" target="_blank">
+            <i class="fa-brands fa-linkedin-in"></i>
+          </a>
+
+          <a href="mailto:harinisarav456@gmail.com">
+            <i class="fa-solid fa-envelope"></i>
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+
+  <footer>
+    <p>© 2026 Harini S | Portfolio Website</p>
+  </footer>
+
+</body>
+
+</html>
